@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+
+                app:cardCornerRadius="@dimen/_4sdp"
+                app:cardElevation="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back2"
+                    android:drawableRight="@drawable/search"
+                    android:hint="Search here"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:padding="15dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/searchCard">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_240sdp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:src="@drawable/discount_back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/leaf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_55sdp"
+                    android:src="@drawable/leaf"
+                    app:layout_constraintEnd_toEndOf="@id/discount"
+                    app:layout_constraintStart_toStartOf="@id/discount"
+                    app:layout_constraintTop_toTopOf="@id/discount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/stay_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_40ssp"
+                    android:text="50% Off\nEverything"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_27ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/leaf" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_40ssp"
+                    android:text="50% Off\nEverything"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_27ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/leaf" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/code_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_40ssp"
+                    android:text="with code: sativa 123"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/discount_txt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/category_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_40ssp"
+                    android:text="Top Categories"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/discount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/category_dis_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_20ssp"
+                    android:text="Mark the occasion with these must have\nproducts"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/category_txt" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_vapes"
+                    android:layout_width="@dimen/_63sdp"
+                    android:layout_height="@dimen/_63sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardBackgroundColor="#E4EAEE"
+                    app:layout_constraintEnd_toStartOf="@id/card_flower"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/category_dis_txt">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/vapes"
+                        android:layout_width="@dimen/_63sdp"
+                        android:layout_height="@dimen/_63sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/vapes" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_flower"
+                    android:layout_width="@dimen/_63sdp"
+                    android:layout_height="@dimen/_63sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardBackgroundColor="#EAD8B9"
+                    app:layout_constraintEnd_toStartOf="@id/card_edibles"
+                    app:layout_constraintStart_toEndOf="@id/card_vapes"
+                    app:layout_constraintTop_toBottomOf="@id/category_dis_txt">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/flower"
+                        android:layout_width="@dimen/_63sdp"
+                        android:layout_height="@dimen/_63sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/flowers" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_edibles"
+                    android:layout_width="@dimen/_63sdp"
+                    android:layout_height="@dimen/_63sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardBackgroundColor="#E4EAEE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/card_flower"
+                    app:layout_constraintTop_toBottomOf="@id/category_dis_txt">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/edibles"
+                        android:layout_width="@dimen/_63sdp"
+                        android:layout_height="@dimen/_63sdp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/edibles" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/vapes_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_20ssp"
+                    android:text="Vapes"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="@id/card_vapes"
+                    app:layout_constraintStart_toStartOf="@id/card_vapes"
+                    app:layout_constraintTop_toBottomOf="@id/card_vapes" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/flowers_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_20ssp"
+                    android:text="Flowers"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="@id/card_flower"
+                    app:layout_constraintStart_toStartOf="@id/card_flower"
+                    app:layout_constraintTop_toBottomOf="@id/card_flower" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/edibles_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_20ssp"
+                    android:text="Edibles"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="@id/card_edibles"
+                    app:layout_constraintStart_toStartOf="@id/card_edibles"
+                    app:layout_constraintTop_toBottomOf="@id/card_edibles" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:src="@drawable/bottom_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/flowers_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productRcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_blank_fragment"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchCard"
+                tools:listitem="@layout/item_product" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

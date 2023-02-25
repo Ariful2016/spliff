@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.arif.spliff.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProductsFragment"
+        android:name="com.arif.spliff.ui.all_products.AllProductsFragment"
+        android:label="fragment_all_products"
+        tools:layout="@layout/fragment_all_products" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.arif.spliff.ui.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+</navigation>

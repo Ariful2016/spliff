@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.StartFragment"
+        android:background="@drawable/back_img">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/logo2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stay_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stay High.\nStay Happy.\nAlways"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center"
+            android:lineHeight="@dimen/_40ssp"
+            android:textSize="@dimen/_27ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/join_btn"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/btn_back"
+            android:text="Join"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/primary_color"
+            android:textAllCaps="false"
+            android:layout_marginLeft="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/login_btn"
+            app:layout_constraintTop_toBottomOf="@id/stay_txt"
+            android:layout_marginTop="@dimen/_18sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_btn"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/btn_back2"
+            android:text="Log In"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@id/join_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stay_txt"
+            android:layout_marginTop="@dimen/_18sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/google_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with google"
+            android:drawableLeft="@drawable/google_logo"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/join_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
